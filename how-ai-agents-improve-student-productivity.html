@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A practical guide to using AI agents for studying, research, planning, and teamwork.">
+<title>How AI Agents Can Improve Students’ Productivity</title>
+<style>
+:root{--paper:#f5f2eb;--surface:#fffdf8;--ink:#20251f;--muted:#59635b;--line:#d9d8ce;--accent:#426a53;--accent-soft:#e7eee7;--warm:#c97749;--measure:720px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.72 system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--accent);text-underline-offset:3px}
+.wrap{max-width:1120px;margin:auto;padding:30px 24px 72px}
+.topline{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding:7px 0 17px;color:var(--muted);font-size:.76rem;letter-spacing:.11em;text-transform:uppercase}
+.mark{display:inline-flex;align-items:center;gap:9px}.mark:before{content:"";width:10px;height:10px;border-radius:50%;background:var(--warm)}
+.hero{padding:76px 0 48px;max-width:920px}
+.kicker{color:var(--accent);font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.16;letter-spacing:-.025em}
+h1{font-size:clamp(2.7rem,7vw,5.8rem);font-weight:500;max-width:900px;margin:18px 0 22px}
+.dek{font:1.2rem/1.55 Georgia,"Times New Roman",serif;color:#48534b;max-width:700px;margin:0}
+.grid{display:grid;grid-template-columns:240px minmax(0,var(--measure));gap:64px;align-items:start}
+aside{position:sticky;top:24px;padding:21px 20px;background:var(--surface);border:1px solid var(--line)}
+aside h2{font:700 .76rem/1.3 system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;margin:0 0 14px;color:var(--muted)}
+aside ol{margin:0;padding-left:19px}aside li{padding:5px 0;font-size:.9rem;line-height:1.4}
+article{min-width:0}
+.summary{padding:22px 25px;margin:0 0 42px;background:var(--accent-soft);border-left:3px solid var(--accent)}
+.summary strong{display:block;margin-bottom:6px;color:var(--accent);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase}
+section{margin:0 0 50px;scroll-margin-top:25px}
+h2{font-size:2.15rem;font-weight:500;margin:0 0 20px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+h3{font-size:1.35rem;font-weight:600;margin:29px 0 9px}
+p{margin:0 0 15px}ul,ol{padding-left:1.3rem}li{padding-left:4px;margin:0 0 8px}li::marker{color:var(--accent)}
+.callout{margin:20px 0;padding:16px 19px;border:1px solid var(--line);background:var(--surface);color:#3c453e}
+.workflow{list-style:none;padding:0;counter-reset:week}
+.workflow li{counter-increment:week;display:grid;grid-template-columns:94px 1fr;gap:16px;margin:0;padding:16px 0;border-bottom:1px solid var(--line)}
+.workflow li:before{content:counter(week,decimal-leading-zero);font:1.1rem Georgia,serif;color:var(--warm)}
+.workflow strong{display:block;color:var(--accent);font-size:.88rem;letter-spacing:.04em}
+.prompt{display:block;padding:12px 15px;margin:10px 0 15px;background:#f0eee6;border-left:2px solid var(--warm);font-size:.93rem;color:#3b433d}
+.checklist{list-style:none;padding:0}.checklist li{position:relative;padding-left:27px}.checklist li:before{content:"□";position:absolute;left:0;top:-1px;color:var(--accent);font-size:1.1rem}
+footer{margin-top:62px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+@media(max-width:800px){.grid{grid-template-columns:1fr;gap:32px}aside{position:static}.hero{padding-top:55px}.wrap{padding-left:18px;padding-right:18px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{body{background:#fff;font-size:12pt}.wrap{max-width:none;padding:0}.grid{display:block}aside{position:static;margin-bottom:30px}.hero{padding:20px 0}a{color:inherit;text-decoration:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="topline"><span class="mark">Student field guide</span><span>Learning · Research · Planning · Teamwork</span></header>
+<div class="hero">
+<div class="kicker">A practical guide</div>
+<h1>How AI Agents Can Improve Students’ Productivity</h1>
+<p class="dek">Use an agent to organize the work around learning—not to replace the thinking that makes learning stick.</p>
+</div>
+<div class="grid">
+<aside aria-label="Table of contents"><h2>Contents</h2><ol>
+<li><a href="#understanding">Understanding AI agents</a></li>
+<li><a href="#uses">Practical student uses</a></li>
+<li><a href="#workflow">A sample study week</a></li>
+<li><a href="#responsible">Benefits, limits &amp; responsible use</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ol></aside>
+<article>
+<div class="summary"><strong>Key points</strong>An AI agent can help turn a goal into a sequence of bounded tasks, use approved tools, and keep track of progress. Its value depends on the quality of your instructions, the sources and permissions it has, and your review of its work.</div>
+<section id="understanding">
+<h2>1. Understanding AI agents</h2>
+<p>An AI agent is a software assistant designed to work toward a goal through one or more steps. Depending on the product and the permissions it receives, it may make a plan, use tools such as a calendar or document, check results, and ask for clarification when needed.</p>
+<p>A basic chatbot usually responds to the prompt in front of it. An agent may continue through a task sequence—for example, turning a list of assignments into a proposed study plan, then checking the plan against a calendar. The distinction is not absolute: some chatbots use tools, and some agents need frequent human direction. Check what a specific tool can access and what actions it can take.</p>
+<div class="callout"><strong>Useful rule:</strong> let the agent prepare, organize, and prompt; keep yourself responsible for understanding, verification, and final decisions.</div>
+</section>
+<section id="uses">
+<h2>2. Practical ways students can use AI agents</h2>
+<h3>Studying: practice active recall</h3>
+<ul>
+<li>Ask the agent to turn your own lecture notes into questions, then answer before viewing suggested responses.</li>
+<li>Request a hint ladder for a difficult problem: one small hint at a time, with the full solution only after you have tried.</li>
+<li>Use it to create a revision checklist from a syllabus or study guide, and mark topics you can explain without notes.</li>
+<li>Ask for an explanation at a different level or with a worked example, then compare it with course materials.</li>
+</ul>
+<div class="prompt">Example: “Use only the notes I provide. Quiz me on these concepts one at a time. Don’t reveal the answer until I try, and flag any question that the notes do not support.”</div>
+<h3>Research: organize inquiry, verify evidence</h3>
+<ul>
+<li>Use an agent to refine a research question, suggest search terms, and make a list of evidence you still need.</li>
+<li>Ask it to organize sources you have found by claim, method, date, and limitations.</li>
+<li>Have it compare a draft with the original sources and identify statements that need a citation or closer checking.</li>
+<li>Open important sources yourself. Confirm that quotations, figures, authors, dates, and links appear in the source before relying on them.</li>
+</ul>
+<div class="prompt">Example: “From these sources, make a claim–evidence table. Quote only text you can locate in the source, include the page or section if available, and mark gaps as ‘needs checking.’”</div>
+<h3>Planning: make a realistic first draft</h3>
+<ul>
+<li>Give the agent your real deadlines, estimated task lengths, commitments, and preferred study times. Ask for a proposed plan with breaks and buffer time.</li>
+<li>Break a large assignment into visible next actions, such as “choose a question” or “draft the outline,” rather than vague goals like “work on essay.”</li>
+<li>At the end of a study session, ask it to record what is done, what remains, and the next step. Correct its notes if they do not match your progress.</li>
+<li>Review any calendar changes before allowing an agent to add, move, or cancel events.</li>
+</ul>
+<h3>Teamwork: keep shared work legible</h3>
+<ul>
+<li>Turn meeting notes into decisions, open questions, and action items. Assign an owner or due date only when the notes explicitly name one.</li>
+<li>Ask for a concise agenda based on unresolved questions and the team’s current project state.</li>
+<li>Use an agent to compare a shared draft against agreed requirements and point out missing sections or inconsistent terminology.</li>
+<li>Have a teammate review any generated summary before it is posted or sent. Do not include private information the team has not agreed to share.</li>
+</ul>
+</section>
+<section id="workflow">
+<h2>3. A sample weekly study workflow</h2>
+<p>Adapt the sequence to your course calendar and energy. The example below is a planning pattern, not a required schedule.</p>
+<ol class="workflow">
+<li><div><strong>Monday — Set the week</strong>List deadlines, classes, and available study blocks. Ask the agent to propose a plan; check that it reflects your actual commitments.</div></li>
+<li><div><strong>Tuesday — Learn and retrieve</strong>Review one topic, then use questions based on your notes to test recall. Mark uncertain answers for follow-up rather than treating a fluent explanation as proof.</div></li>
+<li><div><strong>Wednesday — Research or build</strong>Work on the next concrete assignment step. Use the agent to organize sources, compare requirements, or find gaps; verify important information against original materials.</div></li>
+<li><div><strong>Thursday — Practice and ask</strong>Try problems or explain concepts without assistance first. Ask the agent for hints or feedback on your reasoning, then take unresolved questions to class, office hours, or a trusted study partner.</div></li>
+<li><div><strong>Friday — Review progress</strong>Check completed tasks against the course requirements. Update the plan, note what remains, and write down the first action for the next work session.</div></li>
+<li><div><strong>Weekend — Buffer and reset</strong>Use available time for catch-up or rest. Keep the next week’s plan flexible; do not let an agent fill every open block automatically.</div></li>
+</ol>
+</section>
+<section id="responsible">
+<h2>4. Benefits, limitations, and responsible use</h2>
+<h3>What it may help with</h3>
+<ul><li>Reducing the setup work needed to turn notes, deadlines, and goals into a workable next step.</li><li>Making practice more interactive through questions, hints, and alternative explanations.</li><li>Keeping research and group work organized when decisions, sources, and responsibilities are recorded clearly.</li><li>Helping you notice unfinished tasks—provided you review the agent’s tracking and update errors.</li></ul>
+<h3>Where it can fall short</h3>
+<ul><li>It may produce plausible but incorrect explanations, citations, quotations, or summaries.</li><li>It can misunderstand course instructions, overlook context, or plan more work than your schedule allows.</li><li>Its answers depend on the material and tools available to it; access may be incomplete or restricted.</li><li>Automating too much can hide gaps in your understanding or make you dependent on generated answers.</li><li>Using it may conflict with course or institution rules, especially for submitted work or assessments.</li></ul>
+<h3>Responsible-use checklist</h3>
+<ul class="checklist">
+<li>Check your course’s rules before using AI on assignments, exams, or research.</li>
+<li>Use the agent to support your process; make sure submitted work reflects your own understanding and follows disclosure or citation rules.</li>
+<li>Verify important claims in course materials or original sources. Never rely on a citation until you have opened and checked it.</li>
+<li>Share only information you are permitted to share. Avoid uploading personal, sensitive, or confidential data without authorization.</li>
+<li>Give the agent the minimum access it needs. Review proposed changes before it edits shared files, sends messages, or changes your calendar.</li>
+<li>Keep a record of decisions and correct the agent when its summary or task status is wrong.</li>
+</ul>
+</section>
+<section id="conclusion">
+<h2>5. Conclusion</h2>
+<p>AI agents can make parts of student work easier to organize: practice questions, research notes, study plans, and team follow-ups. Their best role is a bounded helper that makes the next step clearer—not an authority on what is true or a substitute for learning. Set clear limits, verify the work, and keep the important thinking and decisions in your hands.</p>
+</section>
+<footer>Prepared as an original practical guide. No external statistics or sources are cited; examples are illustrative and should be adapted to course rules and the tools available.</footer>
+</article>
+</div>
+</div>
+</body>
+</html>
